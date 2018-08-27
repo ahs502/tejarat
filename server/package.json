@@ -1,0 +1,28 @@
+{
+  "name": "tejarat-server",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "gulp build",
+    "dev": "nodemon --watch src --watch ./index.ts --ext ts,js,json --verbose --exec npm run dev-start",
+    "dev-start": "npm run build && node dist",
+    "gulp": "gulp",
+    "start": "node .",
+    "tsc": "tsc"
+  },
+  "author": "Hessam A Shokravi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "@types/node": "^10.7.1",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-typescript": "^5.0.0-alpha.3",
+    "nodemon": "^1.18.3",
+    "typescript": "^3.0.1",
+    "watch": "^1.0.2"
+  }
+}
