@@ -10,7 +10,7 @@ gulp.task('tsc', () => typescriptProject.src()
     .pipe(typescriptProject()).js
     .pipe(gulp.dest('dist')));
 
-gulp.task('public', () => gulp.src('public/**')
+gulp.task('public', () => gulp.src(['public/**', 'public/_Readme'])
     .pipe(gulp.dest('dist/public')));
 
 gulp.task('files', () => gulp.src([

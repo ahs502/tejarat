@@ -95,6 +95,8 @@ Thumbs.db
 
 # dependencies
 /client/node_modules
+/client/lib/*
+!/client/lib/_Readme
 
 # IDEs and editors
 /client/.idea

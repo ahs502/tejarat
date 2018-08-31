@@ -1,0 +1,17 @@
+{
+  "name": "tejarat",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Hessam A Shokravi <ahs502@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ahs502/tejarat",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

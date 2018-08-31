@@ -3,12 +3,18 @@
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
+  "config": {
+    "unsafe-perm": true
+  },
   "scripts": {
     "build": "gulp build",
     "dev": "concurrently -k -p \"[{index}] [{time}] [{name}]\" -n \"Server,Client\" -c \"blue,green\" \"npm:dev-server\" \"npm:dev-client\"",
-    "dev-client": "cd ./client; ng serve",
-    "dev-server": "npm run --prefix ./server dev",
-    "gulp": "gulp"
+    "dev-client": "npm --prefix client start -- --disable-host-check --host 0.0.0.0 --port ${CLIENT_PORT:-${PORT-4200}} --proxy-config proxy.conf.js",
+    "dev-server": "npm run --prefix server dev",
+    "gulp": "gulp",
+    "install-client": "npm --prefix client install; npm --prefix client run bower -- install",
+    "install-server": "npm --prefix server install",
+    "postinstall": "concurrently --raw \"npm:install-server\" \"npm:install-client\""
   },
   "author": "Hessam A Shokravi",
   "license": "ISC",
